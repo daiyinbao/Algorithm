@@ -18,7 +18,7 @@ public class DynamicArray implements Iterable<Integer> {
     }
 
     public void add(int index, int element) {
-        //À©Èİ
+        //æ‰©å®¹
         checkAndGrow();
         if (size < Capacity - 1) {
             if (index >= 0 && index < size) {
@@ -37,7 +37,7 @@ public class DynamicArray implements Iterable<Integer> {
         return dynamicArray[index];
     }
 
-    //º¯ÊıÊ½½Ó¿Ú-->±éÀú
+    //å‡½æ•°å¼æ¥å£-->éå†
     public void foreach(Consumer<Integer> consumer) {
         for (int i = 0; i < size; i++) {
             consumer.accept(dynamicArray[i]);
@@ -45,11 +45,11 @@ public class DynamicArray implements Iterable<Integer> {
 
     }
 
-    //µü´úÆ÷±éÀú
-    //¸Ã·½·¨µÄµ÷ÓÃ-->ÔöÇ¿forÑ­»·£¬µü´úÆ÷µ÷ÓÃ
+    //è¿­ä»£å™¨éå†
+    //è¯¥æ–¹æ³•çš„è°ƒç”¨-->å¢å¼ºforå¾ªç¯ï¼Œè¿­ä»£å™¨è°ƒç”¨
     @Override
     public Iterator<Integer> iterator() {
-        //ÄäÃûÄÚ²¿Àà
+        //åŒ¿åå†…éƒ¨ç±»
         return new Iterator<Integer>() {
             int i = 0;
 
@@ -66,12 +66,12 @@ public class DynamicArray implements Iterable<Integer> {
         };
     }
 
-    //Á÷µÄ±éÀú
+    //æµçš„éå†
     public IntStream stream(){
         return IntStream.of(Arrays.copyOfRange(dynamicArray,0,size));
     }
 
-    //ÔªËØµÄÉ¾³ı
+    //å…ƒç´ çš„åˆ é™¤
     public int remove(int index){
         int remove=dynamicArray[index];
         if(index<size-1){
@@ -81,7 +81,7 @@ public class DynamicArray implements Iterable<Integer> {
         return remove;
     }
 
-    //À©Èİ
+    //æ‰©å®¹
     public void checkAndGrow(){
         if(size==0){
             dynamicArray=new int[Capacity];

@@ -64,7 +64,7 @@ public class DoublyLinkedList implements Iterable<Integer> {
         Node p = sentinel;
         Node removeNode = sentinel.next;
         if (removeNode == sentinel) {
-            throw new IllegalArgumentException("非法");
+            throw new IllegalArgumentException("闈炴硶");
         }
         Node q = removeNode.next;
         p.next = q;
@@ -75,7 +75,7 @@ public class DoublyLinkedList implements Iterable<Integer> {
         Node p = sentinel;
         Node removeNode = sentinel.pre;
         if (removeNode == sentinel) {
-            throw new IllegalArgumentException("非法");
+            throw new IllegalArgumentException("闈炴硶");
         }
         Node q = removeNode.pre;
         q.next = p;

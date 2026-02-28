@@ -2,8 +2,8 @@ package Queue;
 
 import java.util.Iterator;
 /*
-* 添加数据的一端为tail
-* 删除数据的一端为head
+* 娣诲姞鏁版嵁鐨勪竴绔负tail
+* 鍒犻櫎鏁版嵁鐨勪竴绔负head
 * */
 public class MyQueue<E> implements Queue<E>, Iterable<E> {
     private static class Node<E> {

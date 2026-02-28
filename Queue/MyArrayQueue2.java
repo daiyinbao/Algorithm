@@ -3,16 +3,16 @@ package Queue;
 import java.util.Iterator;
 
 /**
- * ÓÃ size ¸¨ÖúÅĞ¶Ï¿ÕÂú
+ * ç”¨ size è¾…åŠ©åˆ¤æ–­ç©ºæ»¡
  *
- * @param <E> ¶ÓÁĞÖĞÔªËØÀàĞÍ
+ * @param <E> é˜Ÿåˆ—ä¸­å…ƒç´ ç±»å‹
  */
 public class MyArrayQueue2<E> implements Queue<E>, Iterable<E> {
 
     private final E[] array;
     private int head = 0;
     private int tail = 0;
-    private int size = 0; // ÔªËØ¸öÊı
+    private int size = 0; // å…ƒç´ ä¸ªæ•°
 
     @SuppressWarnings("all")
     public MyArrayQueue2(int capacity) {

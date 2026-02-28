@@ -1,8 +1,8 @@
 package DeQueue;
 
 /**
- * Ë«¶Ë¶ÓÁĞ½Ó¿Ú
- * @param <E> ¶ÓÁĞÖĞÔªËØÀàĞÍ
+ * åŒç«¯é˜Ÿåˆ—æ¥å£
+ * @param <E> é˜Ÿåˆ—ä¸­å…ƒç´ ç±»å‹
  */
 public interface DeQueue<E> {
 

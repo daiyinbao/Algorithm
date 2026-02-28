@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.function.Consumer;
 
 public class SingleLinkedList implements Iterable<Integer> {
-    //Í·Ö¸Õë
+    //å¤´æŒ‡é’ˆ
     Node_ head = null;
 
 
@@ -19,8 +19,8 @@ public class SingleLinkedList implements Iterable<Integer> {
     }
 
     public void addFirst(int value) {
-        //head=new Node_(value,null);//Á´±íÎª¿Õ
-        head = new Node_(value, head);//Á´±í·Ç¿Õ
+        //head=new Node_(value,null);//é“¾è¡¨ä¸ºç©º
+        head = new Node_(value, head);//é“¾è¡¨éç©º
     }
 
     public void foreach(Consumer<Integer> consumer) {
@@ -104,7 +104,7 @@ public class SingleLinkedList implements Iterable<Integer> {
     public int findValue(int index) {
         Node_ node = findNode(index);
         if (node == null) {
-            throw new IllegalArgumentException(String.format("index [%d] ²»ºÏ·¨%n", index));
+            throw new IllegalArgumentException(String.format("index [%d] ä¸åˆæ³•%n", index));
         }
         return node.value;
     }
@@ -116,7 +116,7 @@ public class SingleLinkedList implements Iterable<Integer> {
         }
         Node_ prevNode = findNode(index - 1);
         if (prevNode == null) {
-            throw new IllegalArgumentException(String.format("index [%d] ²»ºÏ·¨%n", index));
+            throw new IllegalArgumentException(String.format("index [%d] ä¸åˆæ³•%n", index));
         }
         prevNode.next = new Node_(value, prevNode.next);
 
@@ -124,7 +124,7 @@ public class SingleLinkedList implements Iterable<Integer> {
 
     public void removeFirst() {
         if (head == null) {
-            System.out.println("¿ÕÁ´±í");
+            System.out.println("ç©ºé“¾è¡¨");
             return;
         }
         head = head.next;
@@ -137,11 +137,11 @@ public class SingleLinkedList implements Iterable<Integer> {
         }
         Node_ prevNode = findNode(index - 1);
         if (prevNode == null) {
-            throw new IllegalArgumentException(String.format("index [%d] ²»ºÏ·¨%n", index));
+            throw new IllegalArgumentException(String.format("index [%d] ä¸åˆæ³•%n", index));
         }
         Node_ remove = prevNode.next;
         if (remove == null) {
-            throw new IllegalArgumentException(String.format("index [%d] ²»ºÏ·¨%n", index));
+            throw new IllegalArgumentException(String.format("index [%d] ä¸åˆæ³•%n", index));
         }
         prevNode.next = remove.next;
     }

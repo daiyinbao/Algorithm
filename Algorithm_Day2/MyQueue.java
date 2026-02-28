@@ -16,20 +16,20 @@ public class MyQueue{
     public int size(){
         return size;
     }
-    //¼ÓÈëÔªËØ
+    //åŠ å…¥å…ƒç´ 
     public void offer(int value){
         Node cur = new Node(value);
         if(tail==null){
             head=cur;
             tail=cur;
         }
-        else{//Ô­À´¶ÓÁĞÖĞ´æÔÚÓĞÖµ
+        else{//åŸæ¥é˜Ÿåˆ—ä¸­å­˜åœ¨æœ‰å€¼
             tail.next = cur;
             tail=cur;
         }
         size++;
     }
-    //µ¯³öÔªËØ
+    //å¼¹å‡ºå…ƒç´ 
     public int poll(){
         int ans=0;
         if(head!=null){
@@ -42,7 +42,7 @@ public class MyQueue{
         }
         return ans;
     }
-    //²»µ¯³öÖ»È¡Öµ
+    //ä¸å¼¹å‡ºåªå–å€¼
     public int peek(){
         int ans =0;
         if(head!=null){

@@ -16,8 +16,8 @@ public class DoubleLinkedList_ implements Iterable<Integer> {
         }
     }
 
-    private Node head;//Õ∑…⁄±¯
-    private Node tail;//Œ≤…⁄±¯
+    private Node head;//Â§¥Âì®ÂÖµ
+    private Node tail;//Â∞æÂì®ÂÖµ
 
     public DoubleLinkedList_() {
         head = new Node(null, null, 666);
@@ -40,7 +40,7 @@ public class DoubleLinkedList_ implements Iterable<Integer> {
     public void addIndex(int index, int value) {
         Node preNode = findNode(index - 1);
         if (preNode == null) {
-            throw new IllegalArgumentException(String.format("index [%d] ≤ª∫œ∑®%n", index));
+            throw new IllegalArgumentException(String.format("index [%d] ‰∏çÂêàÊ≥ï%n", index));
         }
         Node nextNode = preNode.next;
         Node insert = new Node(preNode, nextNode, value);
@@ -51,11 +51,11 @@ public class DoubleLinkedList_ implements Iterable<Integer> {
     public void removeIndex(int index) {
         Node preNode = findNode(index - 1);
         if (preNode == null) {
-            throw new IllegalArgumentException(String.format("index [%d] ≤ª∫œ∑®%n", index));
+            throw new IllegalArgumentException(String.format("index [%d] ‰∏çÂêàÊ≥ï%n", index));
         }
         Node remove = preNode.next;
         if (remove == tail) {
-            throw new IllegalArgumentException(String.format("index [%d] ≤ª∫œ∑®%n", index));
+            throw new IllegalArgumentException(String.format("index [%d] ‰∏çÂêàÊ≥ï%n", index));
         }
         Node nextNode = remove.next;
         preNode.next = nextNode;
@@ -73,7 +73,7 @@ public class DoubleLinkedList_ implements Iterable<Integer> {
     public void removeLast() {
         Node removeNode = tail.pre;
         if (removeNode == head) {
-            throw new IllegalArgumentException(String.format("index [%d] ≤ª∫œ∑®%n", 0));
+            throw new IllegalArgumentException(String.format("index [%d] ‰∏çÂêàÊ≥ï%n", 0));
         }
         Node preNode = removeNode.pre;
         preNode.next = tail;

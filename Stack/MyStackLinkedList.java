@@ -20,7 +20,7 @@ public class MyStackLinkedList<E> implements Stack<E>, Iterable<E> {
         }
     }
 
-    private Node<E> head = new Node<E>(null, null);//½áµã
+    private Node<E> head = new Node<E>(null, null);//ç»“ç‚¹
 
     @Override
     public boolean push(E value) {

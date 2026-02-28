@@ -3,9 +3,9 @@ package PriorityQueue;
 import Queue.Queue;
 
 /**
- * »ùÓÚÓĞĞòÊı×éÊµÏÖ,³ö¶ÓÈİÒ×£¬Èë¶ÓÄÑ
+ * åŸºäºæœ‰åºæ•°ç»„å®ç°,å‡ºé˜Ÿå®¹æ˜“ï¼Œå…¥é˜Ÿéš¾
  *
- * @param <E> ¶ÓÁĞÖĞÔªËØÀàĞÍ, ±ØĞëÊµÏÖ Priority ½Ó¿Ú
+ * @param <E> é˜Ÿåˆ—ä¸­å…ƒç´ ç±»å‹, å¿…é¡»å®ç° Priority æ¥å£
  */
 @SuppressWarnings("all")
 public class PriorityQueue2<E extends Priority> implements Queue<E> {

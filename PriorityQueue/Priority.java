@@ -3,8 +3,8 @@ package PriorityQueue;
 public interface Priority {
 
     /**
-     * ╥╣╩ь╤тоС╣дсеох╪╤, т╪╤╗йЩвжт╫╢С, сеох╪╤т╫╦ъ
-     * @return сеох╪╤
+     * Х©■Е⌡·Е╞╧Х╠║Г └Д╪≤Е┘┬Г╨╖, Г╨╕Е╝ Ф∙╟Е╜≈Х╤┼Е╓╖, Д╪≤Е┘┬Г╨╖Х╤┼И╚≤
+     * @return Д╪≤Е┘┬Г╨╖
      */
     int priority();
 }

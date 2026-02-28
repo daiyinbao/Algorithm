@@ -1,7 +1,7 @@
 package Algorithm_Day3;
 
 
-//¹é²¢ÅÅĞò
+//å½’å¹¶æ’åº
 public class mergeSort {
     public static void mergeSort01(int[] arr) {
         if (arr == null || arr.length < 2) {

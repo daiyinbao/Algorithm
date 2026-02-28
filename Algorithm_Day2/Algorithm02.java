@@ -3,7 +3,7 @@ package Algorithm_Day2;
 import java.util.Date;
 
 public class Algorithm02 {
-    //µ¥Á´±í·´×ª
+    //å•é“¾è¡¨åè½¬
     public static void main(String[] args) {
         Node n1 = new Node(1);
         n1.next = new Node(2);

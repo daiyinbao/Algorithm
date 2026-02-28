@@ -10,7 +10,7 @@ public class DoubleNode{
         last=null;
         next=null;
     }
-    //Ë«Á´±í·´×ª
+    //åŒé“¾è¡¨åè½¬
     public static DoubleNode reverseDoubleList(DoubleNode head){
         DoubleNode next = null;
         DoubleNode pre = null;

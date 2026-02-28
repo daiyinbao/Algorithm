@@ -1,7 +1,7 @@
 package Algorithm_Day2;
 
 
-//运用单链表实现栈
+//杩愮敤鍗曢摼琛ㄥ疄鐜版爤
 public class MyStack {
     private Node head;
     private int size;
@@ -32,10 +32,10 @@ public class MyStack {
     public int size(){
         return size;
     }
-    //加入元素
+    //鍔犲叆鍏冪礌
     public void push(int value){
         Node cur = new Node(value);
-        //第一个数
+        //绗竴涓暟
         if(head==null){
             head=cur;
         }
@@ -45,7 +45,7 @@ public class MyStack {
         }
         size++;
     }
-    //弹出元素
+    //寮瑰嚭鍏冪礌
     public int pop(){
         int ans=0;
         if(head!=null){

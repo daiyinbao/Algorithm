@@ -17,7 +17,7 @@ public class DoubleQueue {
     public int size(){
         return size;
     }
-    //´ÓÍ·²¿¼ÓÈë
+    //ä»Žå¤´éƒ¨åŠ å…¥
     public void pushHead(int value){
         DoubleNode cur = new DoubleNode(value);
         if(head==null){
@@ -31,7 +31,7 @@ public class DoubleQueue {
         }
         size++;
     }
-    //´ÓÎ²²¿¼ÓÈë
+    //ä»Žå°¾éƒ¨åŠ å…¥
     public void pushTail(int value){
         DoubleNode cur = new DoubleNode(value);
         if(head==null){
@@ -45,7 +45,7 @@ public class DoubleQueue {
         }
         size++;
     }
-    //´ÓÍ·²¿µ¯³ö
+    //ä»Žå¤´éƒ¨å¼¹å‡º
     public int popHead(){
         int ans=0;
         if(head==null){
@@ -63,7 +63,7 @@ public class DoubleQueue {
         }
         return ans;
     }
-    //´ÓÎ²²¿µ¯³ö
+    //ä»Žå°¾éƒ¨å¼¹å‡º
     public int popTail(){
         int ans=0;
         if(tail==null){

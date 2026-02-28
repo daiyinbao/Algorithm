@@ -1,10 +1,10 @@
 package Algorithm_Day3;
 
 
-//µİ¹éÕÒÊı×éÉÏµÄ×î´óÖµ
+//é€’å½’æ‰¾æ•°ç»„ä¸Šçš„æœ€å¤§å€¼
 public class getMax {
-    //arr[L...R]·¶Î§µÄ×î´óÖµ
-    //¸´ÔÓ¶ÈO(N);
+    //arr[L...R]èŒƒå›´çš„æœ€å¤§å€¼
+    //å¤æ‚åº¦O(N);
     public static int process(int[] arr, int L, int R) {
         if (L == R) {
             return arr[L];

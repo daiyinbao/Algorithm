@@ -3,9 +3,9 @@ package PriorityQueue;
 import Queue.Queue;
 
 /**
- * ÓÅÏÈ¼¶¶ÓÁĞ-->¸ù¾İ´ó¶¥¶ÑÊµÏÖ
- * author:ºÚÂí
- * ¸¸½ÚµãµÄÓÅÏÈ¼¶¸ß
+ * ä¼˜å…ˆçº§é˜Ÿåˆ—-->æ ¹æ®å¤§é¡¶å †å®ç°
+ * author:é»‘é©¬
+ * çˆ¶èŠ‚ç‚¹çš„ä¼˜å…ˆçº§é«˜
  *
  * @param <E>
  */
@@ -20,10 +20,10 @@ public class PriorityQueue3<E extends Priority> implements Queue<E> {
     }
 
     /**
-     * 1. Èë¶ÑĞÂÔªËØ, ¼ÓÈëµ½Êı×éÄ©Î² (Ë÷ÒıÎ»ÖÃ child)
-     * 2. ²»¶Ï±È½ÏĞÂ¼ÓÔªËØÓëËü¸¸½Úµã(parent)ÓÅÏÈ¼¶ (ÉÏ¸¡)
-     * - Èç¹û¸¸½ÚµãÓÅÏÈ¼¶µÍ, ÔòÏòÏÂÒÆ¶¯, ²¢ÕÒµ½ÏÂÒ»¸ö parent
-     * - Ö±ÖÁ¸¸½ÚµãÓÅÏÈ¼¶¸ü¸ß»ò child==0 ÎªÖ¹
+     * 1. å…¥å †æ–°å…ƒç´ , åŠ å…¥åˆ°æ•°ç»„æœ«å°¾ (ç´¢å¼•ä½ç½® child)
+     * 2. ä¸æ–­æ¯”è¾ƒæ–°åŠ å…ƒç´ ä¸å®ƒçˆ¶èŠ‚ç‚¹(parent)ä¼˜å…ˆçº§ (ä¸Šæµ®)
+     * - å¦‚æœçˆ¶èŠ‚ç‚¹ä¼˜å…ˆçº§ä½, åˆ™å‘ä¸‹ç§»åŠ¨, å¹¶æ‰¾åˆ°ä¸‹ä¸€ä¸ª parent
+     * - ç›´è‡³çˆ¶èŠ‚ç‚¹ä¼˜å…ˆçº§æ›´é«˜æˆ– child==0 ä¸ºæ­¢
      */
     @Override
     public boolean offer(E value) {
@@ -42,10 +42,10 @@ public class PriorityQueue3<E extends Priority> implements Queue<E> {
     }
 
     /**
-     * 1. ½»»»¶Ñ¶¥ºÍÎ²²¿ÔªËØ, ÈÃÎ²²¿ÔªËØ³ö¶Ó
-     * 2. (ÏÂÇ±)
-     * - ´Ó¶Ñ¶¥¿ªÊ¼, ½«¸¸ÔªËØÓëÁ½¸öº¢×Ó½Ï´óÕß½»»»
-     * - Ö±µ½¸¸ÔªËØ´óÓÚÁ½¸öº¢×Ó, »òÃ»ÓĞº¢×ÓÎªÖ¹
+     * 1. äº¤æ¢å †é¡¶å’Œå°¾éƒ¨å…ƒç´ , è®©å°¾éƒ¨å…ƒç´ å‡ºé˜Ÿ
+     * 2. (ä¸‹æ½œ)
+     * - ä»å †é¡¶å¼€å§‹, å°†çˆ¶å…ƒç´ ä¸ä¸¤ä¸ªå­©å­è¾ƒå¤§è€…äº¤æ¢
+     * - ç›´åˆ°çˆ¶å…ƒç´ å¤§äºä¸¤ä¸ªå­©å­, æˆ–æ²¡æœ‰å­©å­ä¸ºæ­¢
      */
     @Override
     public E poll() {
@@ -57,7 +57,7 @@ public class PriorityQueue3<E extends Priority> implements Queue<E> {
         Priority e = array[size];
         array[size] = null; // help GC
 
-        // ÏÂÇ±
+        // ä¸‹æ½œ
         down(0);
 
         return (E) e;
@@ -66,14 +66,14 @@ public class PriorityQueue3<E extends Priority> implements Queue<E> {
     private void down(int parent) {
         int left = 2 * parent + 1;
         int right = left + 1;
-        int max = parent; // ¼ÙÉè¸¸ÔªËØÓÅÏÈ¼¶×î¸ß
+        int max = parent; // å‡è®¾çˆ¶å…ƒç´ ä¼˜å…ˆçº§æœ€é«˜
         if (left < size && array[left].priority() > array[max].priority()) {
             max = left;
         }
         if (right < size && array[right].priority() > array[max].priority()) {
             max = right;
         }
-        if (max != parent) { // ÓĞº¢×Ó±È¸¸Ç×´ó
+        if (max != parent) { // æœ‰å­©å­æ¯”çˆ¶äº²å¤§
             swap(max, parent);
             down(max);
         }

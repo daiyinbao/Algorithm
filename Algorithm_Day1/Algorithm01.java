@@ -1,26 +1,26 @@
 package Algorithm_Day1;
 
-//³£ÓÃ¿ì½İ¼ü
+//å¸¸ç”¨å¿«æ·é”®
 /*
- * main·½·¨-->psvm»òmain
+ * mainæ–¹æ³•-->psvmæˆ–main
  * System.out.println();-->sout
- * ¸´ÖÆÑ¡È¡ĞĞÄÚÈİ-->ctrl + d
- * ´úÂëÒÆ¶¯-->ctrl + shift + ¼ıÍ·
- * ´´½¨¶ÔÏó/µ¼°ü--> alt + enter
- * (È¡Ïû)µ¥ĞĞ×¢ÊÍ-->ctrl + /
- * £¨È¡Ïû£©¶àĞĞ×¢ÊÍ-->ctrl + shift + /
- * Ñ¡È¡´úÂë·ÅÈëfor/if/try-catchÓï¾äÖĞ -->ctrl + alt + t
- * getter/setter·½·¨-->alt + insert
+ * å¤åˆ¶é€‰å–è¡Œå†…å®¹-->ctrl + d
+ * ä»£ç ç§»åŠ¨-->ctrl + shift + ç®­å¤´
+ * åˆ›å»ºå¯¹è±¡/å¯¼åŒ…--> alt + enter
+ * (å–æ¶ˆ)å•è¡Œæ³¨é‡Š-->ctrl + /
+ * ï¼ˆå–æ¶ˆï¼‰å¤šè¡Œæ³¨é‡Š-->ctrl + shift + /
+ * é€‰å–ä»£ç æ”¾å…¥for/if/try-catchè¯­å¥ä¸­ -->ctrl + alt + t
+ * getter/setteræ–¹æ³•-->alt + insert
  * */
 public class Algorithm01 {
 
-    //Ã°ÅİÅÅĞò
+    //å†’æ³¡æ’åº
     public static void bubbleSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
         for (int e = arr.length - 1; e >= 0; e--) {
-            for (int i = 0; i < e; i++) {//´Ó0-N-1¿ªÊ¼±éÀúÊı×é£¬½«×î´óÖµÈ·¶¨£¬ÔÙ´Ó0-N-2¡£¡£¡£¡£
+            for (int i = 0; i < e; i++) {//ä»0-N-1å¼€å§‹éå†æ•°ç»„ï¼Œå°†æœ€å¤§å€¼ç¡®å®šï¼Œå†ä»0-N-2ã€‚ã€‚ã€‚ã€‚
                 if (arr[i] > arr[i + 1]) {
                     swap(arr, i, i + 1);
                 }
@@ -28,7 +28,7 @@ public class Algorithm01 {
         }
     }
 
-    //Ñ¡ÔñÅÅĞò
+    //é€‰æ‹©æ’åº
     public static void SelectionSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
@@ -36,39 +36,39 @@ public class Algorithm01 {
         for (int i = 0; i < arr.length; i++) {
             int minIndex = i;
             for (int j = i + 1; j < arr.length; j++) {
-                minIndex = arr[j] < arr[minIndex] ? j : minIndex;//ÅĞ¶ÏjÎ»ÖÃµÄÊıÓëminIndexÎ»ÖÃÊıµÄ´óĞ¡£¬Èôj¸üĞ¡£¬ÔòminIndexÎªj
+                minIndex = arr[j] < arr[minIndex] ? j : minIndex;//åˆ¤æ–­jä½ç½®çš„æ•°ä¸minIndexä½ç½®æ•°çš„å¤§å°ï¼Œè‹¥jæ›´å°ï¼Œåˆ™minIndexä¸ºj
             }
             swap(arr, i, minIndex);
 
         }
     }
 
-    //²åÈëÅÅĞò
+    //æ’å…¥æ’åº
     public static void insertSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
         for (int i = 0; i < arr.length; i++) {
-            for (int j = i - 1; j >= 0 && arr[j] > arr[j + 1]; j--) {//Èç¹ûjÊı´óÓÚj+1£¬Ôò½»»»Á½ÊıµÄÎ»ÖÃ
+            for (int j = i - 1; j >= 0 && arr[j] > arr[j + 1]; j--) {//å¦‚æœjæ•°å¤§äºj+1ï¼Œåˆ™äº¤æ¢ä¸¤æ•°çš„ä½ç½®
                 swap(arr, j, j + 1);
             }
         }
     }
 
-    //Ëæ»úÊı×é²úÉúÆ÷
-    //Math.random()Ëæ»úµÈ¸ÅÂÊ·µ»Ø[0,1)
+    //éšæœºæ•°ç»„äº§ç”Ÿå™¨
+    //Math.random()éšæœºç­‰æ¦‚ç‡è¿”å›[0,1)
     //Math.random()*N  -->[0,N)
     //(int)(Math.random()*N)  -->[0,N-1)
     public static int[] generateRandomArray(int maxSize, int maxValue) {
         int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) ((maxValue + 1) * Math.random()) - (int) ((maxValue) * Math.random());//Õı¸º¾ùÓĞ
+            arr[i] = (int) ((maxValue + 1) * Math.random()) - (int) ((maxValue) * Math.random());//æ­£è´Ÿå‡æœ‰
         }
         return arr;
     }
 
-    //swap,²»ĞèÒª´´½¨ĞÂµÄÄÚ´æ¿Õ¼ä£»
-    //µ±Á½ÊéÖ¸ÏòµÄÄÚ´æÎª²»Í¬¿Õ¼ä£¬Ôò¿ÉÒÔ½»»»£¬Ö¸ÏòµÄÄÚ´æÎªÏàÍ¬¿Õ¼ä£¬ÔòÖµ±äÎª0£»
+    //swap,ä¸éœ€è¦åˆ›å»ºæ–°çš„å†…å­˜ç©ºé—´ï¼›
+    //å½“ä¸¤ä¹¦æŒ‡å‘çš„å†…å­˜ä¸ºä¸åŒç©ºé—´ï¼Œåˆ™å¯ä»¥äº¤æ¢ï¼ŒæŒ‡å‘çš„å†…å­˜ä¸ºç›¸åŒç©ºé—´ï¼Œåˆ™å€¼å˜ä¸º0ï¼›
     public static void swap(int[] arr, int i, int j) {
         arr[i] = arr[i] ^ arr[j];
         arr[j] = arr[i] ^ arr[j];
@@ -82,11 +82,11 @@ public class Algorithm01 {
         System.out.println();
     }
 
-    //¶ş·Ö·¨
+    //äºŒåˆ†æ³•
     /*
 
      */
-    //ÕÒÓĞĞòÊı×éÖĞÊÇ·ñ´æÔÚÕâ¸öÊı
+    //æ‰¾æœ‰åºæ•°ç»„ä¸­æ˜¯å¦å­˜åœ¨è¿™ä¸ªæ•°
     public static boolean exist(int[] arr, int num) {
         int L = 0;
         int R = arr.length - 1;
@@ -104,7 +104,7 @@ public class Algorithm01 {
         return arr[L] == num;
     }
 
-    //ÕÒÂú×ã>=valueµÄ×î×ó±ßµÄÊı
+    //æ‰¾æ»¡è¶³>=valueçš„æœ€å·¦è¾¹çš„æ•°
     public static int nearestIndex(int[] arr, int value) {
         int L = 0;
         int R = arr.length - 1;
@@ -122,7 +122,7 @@ public class Algorithm01 {
         return index;
     }
 
-    //¾Ö²¿×îĞ¡ÖµÎÊÌâ£¨Ö»ĞèÕÒÒ»¸ö £©,ÆäÖĞÊı×éÏàÁÚÁ½¸öÊıÒ»¶¨²»ÏàµÈ
+    //å±€éƒ¨æœ€å°å€¼é—®é¢˜ï¼ˆåªéœ€æ‰¾ä¸€ä¸ª ï¼‰,å…¶ä¸­æ•°ç»„ç›¸é‚»ä¸¤ä¸ªæ•°ä¸€å®šä¸ç›¸ç­‰
     public static int getLessIndex(int[] arr) {
         if (arr == null || arr.length < 2) {
             return -1;
@@ -149,9 +149,9 @@ public class Algorithm01 {
         return left;
     }
 
-    //Òì»òÔËËã-->ÎŞ½øÎ»Ïà¼Ó
+    //å¼‚æˆ–è¿ç®—-->æ— è¿›ä½ç›¸åŠ 
 
-    //Ò»¸öÊı×éÖĞ£¬ÓĞÒ»ÖÖÊı³öÏÖÁËÆæÊı´Î£¬ÆäËûÊı¶¼³öÏÖÁËÅ¼Êı´Î£¬ÔõÃ´ÕÒµ½²¢´òÓ¡ÕâÖÖÊı
+    //ä¸€ä¸ªæ•°ç»„ä¸­ï¼Œæœ‰ä¸€ç§æ•°å‡ºç°äº†å¥‡æ•°æ¬¡ï¼Œå…¶ä»–æ•°éƒ½å‡ºç°äº†å¶æ•°æ¬¡ï¼Œæ€ä¹ˆæ‰¾åˆ°å¹¶æ‰“å°è¿™ç§æ•°
     public static void printOddTimesNum1(int[] arr) {
         int eor = 0;
         if (arr == null || arr.length < 2) {
@@ -163,13 +163,13 @@ public class Algorithm01 {
         System.out.println(eor);
     }
 
-    //Ò»¸öint ÌáÈ¡³ö×îÓÒ²àµÄ1
+    //ä¸€ä¸ªint æå–å‡ºæœ€å³ä¾§çš„1
     public static void findRightOne(int num) {
         int n = num & (~num + 1);
         System.out.println(n);
     }
 
-    //Ò»¸öÊı×éÖĞ£¬ÓĞ2ÖÖÊı³öÏÖÁËÆæÊı´Î£¬ÆäËûÊı¶¼³öÏÖÁËÅ¼Êı´Î£¬ÔõÃ´ÕÒµ½²¢´òÓ¡Õâ2ÖÖÊı
+    //ä¸€ä¸ªæ•°ç»„ä¸­ï¼Œæœ‰2ç§æ•°å‡ºç°äº†å¥‡æ•°æ¬¡ï¼Œå…¶ä»–æ•°éƒ½å‡ºç°äº†å¶æ•°æ¬¡ï¼Œæ€ä¹ˆæ‰¾åˆ°å¹¶æ‰“å°è¿™2ç§æ•°
     public static void printOddTimesNum2(int[] arr) {
         int eor = 0;
         for (int i = 0; i < arr.length; i++) {

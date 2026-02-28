@@ -10,7 +10,7 @@ public class Node {
         next = null;
     }
 
-    //µ¥Á´±í·´×ª
+    //å•é“¾è¡¨åè½¬
     public static Node reverseLinkedList(Node head) {
         Node pre = null;
         Node next = null;

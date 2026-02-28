@@ -1,12 +1,12 @@
 package Algorithm_Day2;
 
 
-//Á½¸öÕ»ÊµÏÖ¶ÓÁĞ
+//ä¸¤ä¸ªæ ˆå®ç°é˜Ÿåˆ—
 /*
-1.½«pushÕ»ÖĞµÄÔªËØµ¹ÈëĞÂÕ»pop£¬Ê¹µÃºó½øÈëpushÕ»ÖĞµÄÔªËØÔÚĞÂÕ»popµÄÇ°²¿·Ö£¬¿ÉÒÔÏÈ³ö
+1.å°†pushæ ˆä¸­çš„å…ƒç´ å€’å…¥æ–°æ ˆpopï¼Œä½¿å¾—åè¿›å…¥pushæ ˆä¸­çš„å…ƒç´ åœ¨æ–°æ ˆpopçš„å‰éƒ¨åˆ†ï¼Œå¯ä»¥å…ˆå‡º
 * */
 public class TwoStacksQueue {
-    //´´½¨Á½¸öÕ»¶ÔÏó
+    //åˆ›å»ºä¸¤ä¸ªæ ˆå¯¹è±¡
     private MyStack stackPush ;
     private MyStack stackPop ;
 
@@ -15,30 +15,30 @@ public class TwoStacksQueue {
         stackPop = new MyStack();
     }
 
-    //½«pushÕ»ÖĞµÄÔªËØ¼ÓÈëpopÕ»ÖĞ
+    //å°†pushæ ˆä¸­çš„å…ƒç´ åŠ å…¥popæ ˆä¸­
     private void pushToPop(){
-        if(stackPop.isEmpty()){//±ØĞëÈ·±£popÕ»Îª¿Õ£¬·ñÔòÔò»áµ·ÂÒË³Ğò
-            while (!stackPush.isEmpty()){//±ØĞë½«pushÕ»ÖĞµÄÔªËØÈ«²¿µ¹ÈëpopÕ»
+        if(stackPop.isEmpty()){//å¿…é¡»ç¡®ä¿popæ ˆä¸ºç©ºï¼Œå¦åˆ™åˆ™ä¼šæ£ä¹±é¡ºåº
+            while (!stackPush.isEmpty()){//å¿…é¡»å°†pushæ ˆä¸­çš„å…ƒç´ å…¨éƒ¨å€’å…¥popæ ˆ
                 stackPop.push(stackPush.pop());
             }
         }
     }
-    //¼ÓÈëÔªËØ
+    //åŠ å…¥å…ƒç´ 
     public void add(int pushInt) {
         stackPush.push(pushInt);
-        pushToPop();//½«¼ÓÈëpushÕ»µÄÔªËØµ¼ÈëpopÕ»
+        pushToPop();//å°†åŠ å…¥pushæ ˆçš„å…ƒç´ å¯¼å…¥popæ ˆ
     }
 
-    //µ¼³öÔªËØ,Ó¦ÏÈ¼ìÑéÊÇ·ñ¿ÉÒÔ´ÓpushÕ»ÖĞµ¼ÈëÊı¾İµ½popÕ»
+    //å¯¼å‡ºå…ƒç´ ,åº”å…ˆæ£€éªŒæ˜¯å¦å¯ä»¥ä»pushæ ˆä¸­å¯¼å…¥æ•°æ®åˆ°popæ ˆ
     public int poll() {
         if (stackPop.isEmpty() && stackPush.isEmpty()) {
             throw new RuntimeException("Queue is empty!");
         }
-        pushToPop();//¼ìÑé
+        pushToPop();//æ£€éªŒ
         return stackPop.pop();
     }
 
-    //ÏÔÊ¾Õ»¶¥
+    //æ˜¾ç¤ºæ ˆé¡¶
     public int peek() {
         if (stackPop.isEmpty() && stackPush.isEmpty()) {
             throw new RuntimeException("Queue is empty!");

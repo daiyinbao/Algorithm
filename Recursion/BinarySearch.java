@@ -1,7 +1,7 @@
 package Recursion;
 
 
-//使用递归实现二分查找
+//浣跨敤閫掑綊瀹炵幇浜屽垎鏌ユ壘
 public class BinarySearch {
 
 }

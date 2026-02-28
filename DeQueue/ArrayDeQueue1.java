@@ -1,8 +1,8 @@
 package DeQueue;
 
 /**
- * Ë«¶Ë¶ÓÁĞ-->Ê¹ÓÃÑ­»·Êı×éÊµÏÖ
- * author:ºÚÂí
+ * åŒç«¯é˜Ÿåˆ—-->ä½¿ç”¨å¾ªç¯æ•°ç»„å®ç°
+ * author:é»‘é©¬
  */
 
 import java.util.Iterator;
@@ -11,15 +11,15 @@ public class ArrayDeQueue1<E> implements DeQueue<E>,Iterable<E>{
 
 
     /**
-     *         offerLast(a)    ÏÈÌí¼ÓÔªËØ tail++
+     *         offerLast(a)    å…ˆæ·»åŠ å…ƒç´  tail++
      *         offerLast(b)
-     *         offerFirst(c)   ÏÈ head-- ÔÙÌí¼ÓÔªËØ
+     *         offerFirst(c)   å…ˆ head-- å†æ·»åŠ å…ƒç´ 
      *
-     *         pollFirst()     ÏÈ»ñÈ¡ÒªÒÆ³ıµÄÖµ head++
-     *         pollLast()      ÏÈ tail-- ÔÙ»ñÈ¡ÒªÒÆ³ıµÄÖµ
+     *         pollFirst()     å…ˆè·å–è¦ç§»é™¤çš„å€¼ head++
+     *         pollLast()      å…ˆ tail-- å†è·å–è¦ç§»é™¤çš„å€¼
      *
-     *         head == tail ¿Õ
-     *         head ~ tail == Êı×é³¤¶È-1 Âú
+     *         head == tail ç©º
+     *         head ~ tail == æ•°ç»„é•¿åº¦-1 æ»¡
      */
     E[] array;
     int head;

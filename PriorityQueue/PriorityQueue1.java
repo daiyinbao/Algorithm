@@ -4,9 +4,9 @@ package PriorityQueue;
 import Queue.Queue;
 
 /**
- * ÓÅÏÈ¼¶¶ÓÁĞ-->»ùÓÚÎŞĞòÊı×éµÄÊµÏÖ,³ö¶ÓÄÑ£¬Èë¶ÓÈİÒ×
- * author:ºÚÂí
- * Ò»¶Ë½ø£¬Ò»¶ËÓÅÏÈ¼¶¸ßµÄÔªËØÏÈ³ö
+ * ä¼˜å…ˆçº§é˜Ÿåˆ—-->åŸºäºæ— åºæ•°ç»„çš„å®ç°,å‡ºé˜Ÿéš¾ï¼Œå…¥é˜Ÿå®¹æ˜“
+ * author:é»‘é©¬
+ * ä¸€ç«¯è¿›ï¼Œä¸€ç«¯ä¼˜å…ˆçº§é«˜çš„å…ƒç´ å…ˆå‡º
  */
 public class PriorityQueue1<E extends Priority> implements Queue<E> {
     Priority[] array;
@@ -26,9 +26,9 @@ public class PriorityQueue1<E extends Priority> implements Queue<E> {
     }
 
     /**
-     * ¸ù¾İÓÅÏÈ¼¶É¾³ıÊı¾İ
-     * ¸Ã·½·¨ÅĞ¶ÏÓÅÏÈ¼¶
-     * return ÓÅÏÈ¼¶×î¸ßµÄË÷Òı
+     * æ ¹æ®ä¼˜å…ˆçº§åˆ é™¤æ•°æ®
+     * è¯¥æ–¹æ³•åˆ¤æ–­ä¼˜å…ˆçº§
+     * return ä¼˜å…ˆçº§æœ€é«˜çš„ç´¢å¼•
      */
     private int selMaxPriority(){
         int max=0;
@@ -42,7 +42,7 @@ public class PriorityQueue1<E extends Priority> implements Queue<E> {
     }
 
     /**
-     * É¾³ıÔªËØ
+     * åˆ é™¤å…ƒç´ 
      * @return
      */
     private void remove(int index){

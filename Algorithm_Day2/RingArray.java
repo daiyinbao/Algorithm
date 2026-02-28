@@ -1,7 +1,7 @@
 package Algorithm_Day2;
 
 
-//ÀûÓÃÊı×éÊµÏÖÕ»
+//åˆ©ç”¨æ•°ç»„å®ç°æ ˆ
 public class RingArray {
         private int[] array;
         private int pushI;
@@ -15,7 +15,7 @@ public class RingArray {
             size=0;
             this.limit=limit;
         }
-        //¼ÓÈëÔªËØ
+        //åŠ å…¥å…ƒç´ 
         public void push(int value){
             if(size==limit){
                 throw new RuntimeException("fulled");
@@ -27,7 +27,7 @@ public class RingArray {
             }
         }
 
-        //µ¯³öÔªËØ
+        //å¼¹å‡ºå…ƒç´ 
         public int pop(){
             if(size==limit){
                 throw new RuntimeException("fulled");
@@ -44,7 +44,7 @@ public class RingArray {
         public boolean isEmpty() {
             return size == 0;
         }
-        //¼ìÑéÏÂ±êÊÇ·ñ³¬¹ıÊı×é³¤¶È
+        //æ£€éªŒä¸‹æ ‡æ˜¯å¦è¶…è¿‡æ•°ç»„é•¿åº¦
         private int nextIndex(int i){
             return i<limit-1?i+1:0;
         }

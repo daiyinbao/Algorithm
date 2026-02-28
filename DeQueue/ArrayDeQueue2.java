@@ -1,9 +1,9 @@
 package DeQueue;
 
 /**
- * 双端队列-->使用数组实现
- * author：左程云
- * 使用size优化循环数组，有一个空间不能使用的问题
+ * 鍙岀闃熷垪-->浣跨敤鏁扮粍瀹炵幇
+ * author锛氬乏绋嬩簯
+ * 浣跨敤size浼樺寲寰幆鏁扮粍锛屾湁涓�涓┖闂翠笉鑳戒娇鐢ㄧ殑闂
  */
 
 public class ArrayDeQueue2 {

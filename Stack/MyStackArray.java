@@ -23,8 +23,8 @@ public class MyStackArray<E> implements Stack<E>, Iterable<E> {
     @Override
     /**
      *
-     * ʹ������ʵ��ջʱ������pop������Ԫ�ز�û��ֱ�Ӵ�������ɾ����Ԫ������top-1λ�ã�
-     * ֻ��ָ�벻����������
+     * 使用数组实现栈时，调用pop方法，元素并没有直接从数组中删除，元素仍在top-1位置，
+     * 只是指针不会在引用它
      */
 
     public E pop() {
